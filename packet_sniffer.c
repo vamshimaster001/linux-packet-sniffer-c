@@ -934,13 +934,6 @@ int main(int argc , char *argv[])
   char value[64];
   int value_size = 64;
   value[0] = '\0';
-
-  server_fd = socket(AF_PACKET,SOCK_RAW,htons(ETH_P_ALL));
-  if(server_fd < 0)
-  {
-    logging("ERROR",strerror(errno));
-    return -1;
-  }
   
   queue1 = malloc(sizeof(struct packet_queue));
   queue1->count = 0;
